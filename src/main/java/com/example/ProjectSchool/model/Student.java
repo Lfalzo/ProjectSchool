@@ -22,4 +22,11 @@ public class Student {
     public Boolean getActive(){
         return this.active;
     }
+
+    public void learn(){
+
+    }
+    public void practice(){
+
+    }
 }
