@@ -6,8 +6,11 @@ public class Student {
     private String phone;
     private Boolean active;
 
-    public Student(){
-
+    public Student(String dni,String nameStudent, String phone, Boolean active){
+        this.DNI = dni;
+        this.nameStudent = nameStudent;
+        this.phone = phone;
+        this.active = active;
     }
 
     public String getDNI(){

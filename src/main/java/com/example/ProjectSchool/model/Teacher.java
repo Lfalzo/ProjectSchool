@@ -4,8 +4,10 @@ public class Teacher {
     private String DNI;
     private String nameTeacher;
     private String phone;
-    public Teacher(){
-
+    public Teacher(String dni, String nameTeacher, String phone){
+        this.DNI = dni;
+        this.nameTeacher = nameTeacher;
+        this.phone = phone;
     }
     public String getDNI(){
         return this.DNI;
