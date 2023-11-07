@@ -10,15 +10,28 @@ public class UF {
         this.hours = hours;
         this.codiUF = codiUF;
     }
-    public String getNameUF(){
-        return this.nameUF;
-    }
-    public int getHours(){
-        return this.hours;
+
+    public String getNameUF() {
+        return nameUF;
     }
 
-    public String getCodiUF(){
-        return this.codiUF;
+    public void setNameUF(String nameUF) {
+        this.nameUF = nameUF;
     }
 
+    public int getHours() {
+        return hours;
+    }
+
+    public void setHours(int hours) {
+        this.hours = hours;
+    }
+
+    public String getCodiUF() {
+        return codiUF;
+    }
+
+    public void setCodiUF(String codiUF) {
+        this.codiUF = codiUF;
+    }
 }

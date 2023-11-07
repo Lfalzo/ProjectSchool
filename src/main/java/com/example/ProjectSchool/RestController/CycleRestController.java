@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 @RestController
 @RequestMapping("api/v1/cycle/")
@@ -18,17 +19,19 @@ public class CycleRestController {
     CycleService cycleService;
 
     @GetMapping("/getAllCycles")
-    public ArrayList<Cycle> getAllCycles(Model container){
+    public Iterable<Cycle> getAllCycles(Model container){
         //ArrayList<Cycle> cyclesFromService = cycleService.getAllCycles();
-
-        return cycleService.getAllCycles();
+        Iterable<Cycle> ciclos = cycleService.listAllCycles();
+        System.out.println(ciclos);
+        //return cycleService.getAllCycles();
+        return  ciclos;
     }
     @GetMapping("/getCycleByCodi/{codi}")
     public Cycle getCycleByCodi(@PathVariable String codi){
 
         Cycle cycle = null;
 
-        cycle = cycleService.findCycleByCodi(codi);
+        //cycle = cycleService.findCycleByCodi(codi);
 
         return cycle;
     }
