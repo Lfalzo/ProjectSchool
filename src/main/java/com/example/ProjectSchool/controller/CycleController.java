@@ -7,8 +7,10 @@ import com.example.ProjectSchool.service.CycleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class CycleController {
@@ -36,6 +38,20 @@ public class CycleController {
     public String saveCycle(@ModelAttribute("cycle") Cycle cycle){
         cycleService.saveCycle(cycle);
 
+        return "redirect:/cycles";
+    }
+
+    @RequestMapping("/editcycle/{codiCycle}")
+    public ModelAndView EditCycle(@PathVariable(name = "codiCycle") String codiCycle){
+        ModelAndView mav = new ModelAndView("edit_cycle.html");
+        Cycle cycle = cycleService.getCycle(codiCycle);
+        mav.addObject("cycle",cycle);
+
+        return mav;
+    }
+    @RequestMapping("/deletecycle/{codiCycle}")
+    public String deleteCycle(@PathVariable(name = "codiCycle") String codiCycle){
+        cycleService.deleteCycle(codiCycle);
         return "redirect:/cycles";
     }
 }

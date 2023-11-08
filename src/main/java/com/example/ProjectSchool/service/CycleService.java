@@ -19,6 +19,12 @@ public class CycleService {
 
         return repoCycle.findAll();
     }
+
+    public Cycle getCycle(String cycle){
+        return repoCycle.findById(cycle).orElse(null);
+    }
+
+
     /*public ArrayList<Cycle> getAllCycles() {
         return listCycles;
     }*/
@@ -33,8 +39,12 @@ public class CycleService {
         }
         return cycleFound;
     }*/
-    public void saveCycle(Cycle cycle){
-        repoCycle.save(cycle);
+    public void saveCycle(Cycle codicCycle){
+        repoCycle.save(codicCycle);
+    }
+
+    public void deleteCycle(String codiCycle) {
+        repoCycle.deleteById(codiCycle);
     }
 }
 

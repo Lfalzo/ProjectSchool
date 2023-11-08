@@ -31,14 +31,10 @@
                         <td colspan="3" th:text="${cycle.qttUFs}">Number UFs</td>
                         <td colspan="4" th:text="${cycle.hours}">Total time hours</td>
                          <td colspan="5">
-                             <a type="button" class="btn btn-outline-warning btn-lg" id="btn_upd">
-                                 Edit
-                             </a>
+                             <a type="button" class="btn btn-outline-warning btn-lg" th:href="@{'/editcycle/' + ${cycle.codiCycle}}">Edit</a>
                          </td>
                          <td colspan="6">
-                             <a type="button" class="btn btn-outline-danger btn-lg" id="btn_del">
-                                 <strong>X</strong> Delete
-                             </a>
+                             <a type="button" class="btn btn-outline-danger btn-lg" th:href="@{'/deletecycle/' + ${cycle.codiCycle}}"><strong>X</strong> Delete</a>
                          </td>
                      </tr>
                 </tbody>
