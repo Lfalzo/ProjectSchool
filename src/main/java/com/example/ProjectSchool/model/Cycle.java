@@ -43,31 +43,4 @@ public class Cycle {
         this.codiCycle = codiCycle;
     }
 
-    /*CREATE TABLE cycle(
-	codiCycle VARCHAR(5) PRIMARY KEY,
-	nameCycle VARCHAR(100),
-	qttUFs INT,
-	hours INT
-);
-
-CREATE TABLE student(
-	DNI VARCHAR(10) PRIMARY KEY,
-	nameStudent  VARCHAR(100),
-	phone VARCHAR(10),
-	mail VARCHAR(80),
-	active BIT
-);
-
-CREATE TABLE teacher(
-	DNI VARCHAR(10) PRIMARY KEY,
-	nameTeacher VARCHAR(100),
-	phone VARCHAR(10),
-	mail VARCHAR(80)
-);
-
-CREATE TABLE uf(
-	codiUF VARCHAR(8) PRIMARY KEY,
-	nameUF VARCHAR(50),
-	hours INT
-);*/
 }

@@ -46,5 +46,9 @@ public class CycleService {
     public void deleteCycle(String codiCycle) {
         repoCycle.deleteById(codiCycle);
     }
+
+    public void deleteAllCycles(){
+        repoCycle.deleteAll();
+    }
 }
 

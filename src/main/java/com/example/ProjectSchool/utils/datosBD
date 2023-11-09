@@ -1,0 +1,138 @@
+/*CREATE TABLE cycle(
+	codiCycle VARCHAR(5) PRIMARY KEY,
+	nameCycle VARCHAR(100),
+	qttUFs INT,
+	hours INT
+);
+
+CREATE TABLE student(
+	DNI VARCHAR(10) PRIMARY KEY,
+	nameStudent  VARCHAR(100),
+	phone VARCHAR(10),
+	mail VARCHAR(80),
+	active BIT
+);
+
+CREATE TABLE teacher(
+	DNI VARCHAR(10) PRIMARY KEY,
+	nameTeacher VARCHAR(100),
+	phone VARCHAR(10),
+	mail VARCHAR(80)
+);
+
+CREATE TABLE uf(
+	codiUF VARCHAR(8) PRIMARY KEY,
+	nameUF VARCHAR(50),
+	hours INT
+);*/
+
+TABLA CICLOS
+
+INSERT INTO CYCLE VALUES('CYC01', 'Ciclo 1', 30, 150);
+INSERT INTO CYCLE VALUES('CYC02', 'Ciclo 2', 25, 120);
+INSERT INTO CYCLE VALUES('CYC03', 'Ciclo 3', 35, 180);
+INSERT INTO CYCLE VALUES('CYC04', 'Ciclo 4', 28, 135);
+INSERT INTO CYCLE VALUES('CYC05', 'Ciclo 5', 32, 160);
+INSERT INTO CYCLE VALUES('CYC06', 'Ciclo 6', 40, 200);
+INSERT INTO CYCLE VALUES('CYC07', 'Ciclo 7', 22, 110);
+INSERT INTO CYCLE VALUES('CYC08', 'Ciclo 8', 37, 185);
+INSERT INTO CYCLE VALUES('CYC09', 'Ciclo 9', 31, 155);
+INSERT INTO CYCLE VALUES('CYC10', 'Ciclo 10', 27, 130);
+
+
+TABLA STUDENTS
+
+INSERT INTO STUDENT VALUES('Y8435695V', 'Juan Pérez', '123456789', 'juan@example.com', 1),
+INSERT INTO STUDENT VALUES('Z7456892W', 'María López', '987654321', 'maria@example.com', 1),
+INSERT INTO STUDENT VALUES('X5698741U', 'Carlos Sánchez', '555555555', 'carlos@example.com', 1),
+INSERT INTO STUDENT VALUES('A1234567B', 'Ana Gómez', '111111111', 'ana@example.com', 1),
+INSERT INTO STUDENT VALUES('B9876543C', 'Pedro Ramírez', '999999999', 'pedro@example.com', 1),
+INSERT INTO STUDENT VALUES('C3698745D', 'Luisa Martínez', '777777777', 'luisa@example.com', 1),
+INSERT INTO STUDENT VALUES('D2589631E', 'Elena Fernández', '444444444', 'elena@example.com', 1),
+INSERT INTO STUDENT VALUES('E1478523F', 'Sofía García', '888888888', 'sofia@example.com', 1),
+INSERT INTO STUDENT VALUES('F4567891G', 'Javier Rodríguez', '333333333', 'javier@example.com', 1),
+INSERT INTO STUDENT VALUES('G6543218H', 'Carlos López', '222222222', 'carlos2@example.com', 1),
+INSERT INTO STUDENT VALUES('H1237895I', 'Laura Torres', '666666666', 'laura@example.com', 1),
+INSERT INTO STUDENT VALUES('I7896325J', 'Pablo González', '111122233', 'pablo@example.com', 1),
+INSERT INTO STUDENT VALUES('J8523697K', 'Silvia Pérez', '555544466', 'silvia@example.com', 1),
+INSERT INTO STUDENT VALUES('K9632147L', 'Raúl Martínez', '787878787', 'raul@example.com', 1),
+INSERT INTO STUDENT VALUES('L3698741M', 'Isabel Sánchez', '545454545', 'isabel@example.com', 1),
+INSERT INTO STUDENT VALUES('M7539512N', 'Luis Gómez', '989898989', 'luis2@example.com', 1),
+INSERT INTO STUDENT VALUES('N9517532O', 'Carmen García', '565656565', 'carmen@example.com', 1),
+INSERT INTO STUDENT VALUES('O3579512P', 'Andrés Rodríguez', '787878787', 'andres@example.com', 1),
+INSERT INTO STUDENT VALUES('P1597532Q', 'Patricia López', '545454545', 'patricia@example.com', 1),
+INSERT INTO STUDENT VALUES('Q7531592R', 'Miguel Torres', '111122233', 'miguel@example.com', 1),
+INSERT INTO STUDENT VALUES('R3579512S', 'Lucía Martínez', '555544466', 'lucia@example.com', 1),
+INSERT INTO STUDENT VALUES('S7539512T', 'Joaquín Pérez', '787878787', 'joaquin@example.com', 1),
+INSERT INTO STUDENT VALUES('T3579512U', 'Eva Sánchez', '545454545', 'eva@example.com', 1),
+INSERT INTO STUDENT VALUES('U7539512V', 'Ricardo Rodríguez', '111122233', 'ricardo@example.com', 1),
+INSERT INTO STUDENT VALUES('V3579512W', 'Susana González', '555544466', 'susana@example.com', 1),
+INSERT INTO STUDENT VALUES('W7539512X', 'Antonio Martínez', '787878787', 'antonio@example.com', 1),
+INSERT INTO STUDENT VALUES('X3579512Y', 'Beatriz López', '545454545', 'beatriz@example.com', 1),
+INSERT INTO STUDENT VALUES('Y7539512Z', 'Francisco Torres', '111122233', 'francisco@example.com', 1),
+INSERT INTO STUDENT VALUES('A1111111A', 'Marta Gómez', '555544466', 'marta@example.com', 1),
+INSERT INTO STUDENT VALUES('B2222222B', 'José Pérez', '787878787', 'jose@example.com', 1),
+INSERT INTO STUDENT VALUES('C3333333C', 'Cecilia Sánchez', '545454545', 'cecilia@example.com', 1),
+INSERT INTO STUDENT VALUES('D4444444D', 'Daniel Rodríguez', '111122233', 'daniel@example.com', 1),
+INSERT INTO STUDENT VALUES('E5555555E', 'Sara Martínez', '555544466', 'sara@example.com', 1),
+INSERT INTO STUDENT VALUES('F6666666F', 'Carlos López', '787878787', 'carlos3@example.com', 1),
+INSERT INTO STUDENT VALUES('G7777777G', 'Luisa Torres', '545454545', 'luisa2@example.com', 1),
+INSERT INTO STUDENT VALUES('H8888888H', 'Elena González', '111122233', 'elena2@example.com', 1),
+INSERT INTO STUDENT VALUES('I9999999I', 'Javier Rodríguez', '555544466', 'javier2@example.com', 1),
+INSERT INTO STUDENT VALUES('J0000000J', 'Carlos López', '787878787', 'carlos4@example.com', 1),
+INSERT INTO STUDENT VALUES('K1111111K', 'Laura Torres', '545454545', 'laura2@example.com', 1),
+INSERT INTO STUDENT VALUES('L2222222L', 'Pablo González', '111122233', 'pablo2@example.com', 1),
+INSERT INTO STUDENT VALUES('M3333333M', 'Silvia Pérez', '555544466', 'silvia2@example.com', 1),
+INSERT INTO STUDENT VALUES('N4444444N', 'Raúl Martínez', '787878787', 'raul2@example.com', 1),
+INSERT INTO STUDENT VALUES('O5555555O', 'Isabel Sánchez', '545454545', 'isabel2@example.com', 1),
+INSERT INTO STUDENT VALUES('P6666666P', 'Luis Gómez', '111122233', 'luis3@example.com', 1),
+INSERT INTO STUDENT VALUES('Q7777777Q', 'Carmen García', '555544466', 'carmen2@example.com', 1),
+INSERT INTO STUDENT VALUES('R8888888R', 'Andrés Rodríguez', '787878787', 'andres2@example.com', 1),
+INSERT INTO STUDENT VALUES('S9999999S', 'Patricia López', '545454545', 'patricia2@example.com', 1),
+INSERT INTO STUDENT VALUES('T0000000T', 'Miguel Torres', '111122233', 'miguel2@example.com', 1),
+INSERT INTO STUDENT VALUES('U1111111U', 'Lucía Martínez', '555544466', 'lucia2@example.com', 1),
+INSERT INTO STUDENT VALUES('V2222222V', 'Joaquín Pérez', '787878787', 'joaquin2@example.com', 1),
+INSERT INTO STUDENT VALUES('W3333333W', 'Eva Sánchez', '545454545', 'eva2@example.com', 1),
+INSERT INTO STUDENT VALUES('X4444444X', 'Ricardo Rodríguez', '111122233', 'ricardo2@example.com', 1),
+INSERT INTO STUDENT VALUES('Y5555555Y', 'Susana González', '555544466', 'susana2@example.com', 1),
+INSERT INTO STUDENT VALUES('Z6666666Z', 'Antonio Martínez', '787878787', 'antonio2@example.com', 1);
+
+TABLA TEACHER
+
+
+INSERT INTO TEACHER VALUES('Y8435695V', 'Juan Pérez', '1234567890', 'juan.perez@example.com');
+INSERT INTO TEACHER VALUES('A9876543B', 'María López', '9876543210', 'maria.lopez@example.com');
+INSERT INTO TEACHER VALUES('C5678901D', 'Carlos Rodríguez', '5555555555', 'carlos.rodriguez@example.com');
+INSERT INTO TEACHER VALUES('X1234567Y', 'Luis González', '7777777777', 'luis.gonzalez@example.com');
+INSERT INTO TEACHER VALUES('Z9876543A', 'Ana Martínez', '8888888888', 'ana.martinez@example.com');
+INSERT INTO TEACHER VALUES('M4567890N', 'Pedro Sánchez', '9999999999', 'pedro.sanchez@example.com');
+INSERT INTO TEACHER VALUES('P2345678Q', 'Elena Ramírez', '1111111111', 'elena.ramirez@example.com');
+INSERT INTO TEACHER VALUES('R3456789S', 'Javier Castro', '2222222222', 'javier.castro@example.com');
+INSERT INTO TEACHER VALUES('E7890123F', 'Sara Jiménez', '3333333333', 'sara.jimenez@example.com');
+INSERT INTO TEACHER VALUES('K6789012L', 'Antonio Vargas', '4444444444', 'antonio.vargas@example.com');
+
+TABLA UF
+
+INSERT INTO UF VALUES('M13UF11', 'Nombre 1', 10);
+INSERT INTO UF VALUES('M13UF12', 'Nombre 2', 15);
+INSERT INTO UF VALUES('M13UF13', 'Nombre 3', 12);
+INSERT INTO UF VALUES('M13UF14', 'Nombre 4', 8);
+INSERT INTO UF VALUES('M13UF15', 'Nombre 5', 20);
+INSERT INTO UF VALUES('M13UF16', 'Nombre 6', 6);
+INSERT INTO UF VALUES('M13UF17', 'Nombre 7', 18);
+INSERT INTO UF VALUES('M13UF18', 'Nombre 8', 9);
+INSERT INTO UF VALUES('M13UF19', 'Nombre 9', 11);
+INSERT INTO UF VALUES('M13UF20', 'Nombre 10', 14);
+INSERT INTO UF VALUES('M13UF21', 'Nombre 11', 7);
+INSERT INTO UF VALUES('M13UF22', 'Nombre 12', 16);
+INSERT INTO UF VALUES('M13UF23', 'Nombre 13', 13);
+INSERT INTO UF VALUES('M13UF24', 'Nombre 14', 19);
+INSERT INTO UF VALUES('M13UF25', 'Nombre 15', 10);
+INSERT INTO UF VALUES('M13UF26', 'Nombre 16', 12);
+INSERT INTO UF VALUES('M13UF27', 'Nombre 17', 8);
+INSERT INTO UF VALUES('M13UF28', 'Nombre 18', 15);
+INSERT INTO UF VALUES('M13UF29', 'Nombre 19', 11);
+INSERT INTO UF VALUES('M13UF30', 'Nombre 20', 14);
+
+
+

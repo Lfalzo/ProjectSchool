@@ -4,10 +4,7 @@ import com.example.ProjectSchool.model.Cycle;
 import com.example.ProjectSchool.service.CycleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -31,8 +28,21 @@ public class CycleRestController {
 
         Cycle cycle = null;
 
-        //cycle = cycleService.findCycleByCodi(codi);
+        cycle = cycleService.getCycle(codi);
 
         return cycle;
+    }
+
+    @DeleteMapping("/deleteAllCycles")
+    public void deleteAllCycles(){
+        cycleService.deleteAllCycles();
+    }
+
+    @DeleteMapping("/deleteCycleByCodi/{codiCycle}")
+    public void deleteCycleByCodi(@PathVariable String codiCycle){
+        if (cycleService.getCycle(codiCycle).getCodiCycle().equals(codiCycle))
+        {
+            cycleService.deleteCycle(codiCycle);
+        }
     }
 }
